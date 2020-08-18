@@ -16,7 +16,7 @@
 
 ![Watch the video](./.github/instaclone.gif)
 
-# Sobre
+# About
 
 This poject was developded with React.js, it's just to study. On this projects  
 I use a lot of concepts os React and CSS, like how to structure a project, states,  
