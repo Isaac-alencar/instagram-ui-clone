@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  grid-area: header;
   position: fixed;
   top: 0;
   width: 100%;
   height: 52px;
   background-color: var(--color-header-background);
   border-bottom: 1px solid var(--color-outline-border);
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 export const HeaderContent = styled.div`
@@ -36,7 +40,7 @@ export const SearchContainer = styled.div`
   background-color: var(--color-background);
   svg {
     margin-right: 0.9rem;
-    height: 1.6rem;
+    height: 1.2rem;
     width: 1.6rem;
     color: var(--color-text-in-light);
   }
@@ -48,8 +52,8 @@ export const SearchContainer = styled.div`
 export const NavLinks = styled.div`
   display: flex;
   svg {
-    height: 2.9rem;
-    width: 2.9rem;
+    height: 2.6rem;
+    width: 2.6rem;
     margin-right: 2rem;
     color: var(--color-fill-icons);
   }

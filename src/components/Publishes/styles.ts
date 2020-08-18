@@ -1,18 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  /* grid-area: time-line; */
-
   display: flex;
   flex-direction: column;
 
-  margin: -3rem 18rem;
+  margin: 0 auto 2.4rem;
 
   width: 614px;
   height: 860px;
 
   border: 1px solid var(--color-outline-border);
   background-color: var(--color-header-background);
+
+  @media (min-width: 1000px) {
+    margin: 0.2rem 18rem 5rem 18rem;
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+    height: 580px;
+    border: none;
+    margin: 0;
+  }
 `;
 
 export const ProfileInfo = styled.div`
@@ -45,6 +53,9 @@ export const Picture = styled.div`
     height: 600px;
     width: 100%;
     object-fit: fill;
+    @media (max-width: 425px) {
+      height: 320px;
+    }
   }
 `;
 export const Actions = styled.div`
@@ -99,6 +110,9 @@ export const Comments = styled.div`
     font: 400 1.2rem "Roboto";
   }
   border-bottom: 1px solid var(--color-outline-border);
+  @media (max-width: 425px) {
+    border-bottom: none;
+  }
 `;
 
 export const AddComment = styled.form`
@@ -115,7 +129,7 @@ export const AddComment = styled.form`
       font: 400 1.4rem "Roboto";
     }
     &:focus:not(:placeholder-shown) + button {
-      opacity: 1;
+      color: var(--color-backround-button);
     }
   }
   button {
@@ -123,7 +137,9 @@ export const AddComment = styled.form`
     padding: 0.8rem 1.6rem;
     font: 700 1.4rem "Roboto";
     background-color: transparent;
-    color: var(--color-backround-button);
-    opacity: 0.5;
+    color: var(--color-backround-button-in-light);
+  }
+  @media (max-width: 425px) {
+    display: none;
   }
 `;
